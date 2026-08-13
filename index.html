@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lizzie pod — tracking</title>
+<style>
+  :root {
+    --paper: #f4ead8;
+    --ink: #2a2118;
+    --muted: #6b5a48;
+    --teal: #2f6f6a;
+    --teal-d: #1e4a47;
+    --terra: #c45c32;
+    --sand: #e2c9a0;
+    --card: #fff8ee;
+    --line: #d9c4a4;
+    --hold: #9b2e2e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 16px/1.45 "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 32px 20px 64px; }
+  header { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
+  h1 { font-size: 28px; letter-spacing: .04em; margin: 0 0 4px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  .pill {
+    background: var(--terra); color: #fff8ee; font: 700 12px/1 ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: .08em; text-transform: uppercase; padding: 8px 12px; border-radius: 4px;
+  }
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 22px 0; }
+  @media (max-width: 800px) { .row { grid-template-columns: 1fr; } }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .card h2 {
+    margin: 0; padding: 10px 14px; font: 700 12px/1 ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: .1em; text-transform: uppercase; color: #fff8ee;
+  }
+  .teal { background: var(--teal); }
+  .terra { background: var(--terra); }
+  .sandh { background: #b0894f; }
+  .card .body { padding: 12px 14px 14px; font-size: 14.5px; }
+  .card ul { margin: 0; padding-left: 18px; }
+  .card li { margin: 4px 0; }
+  .wide { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; margin: 12px 0; }
+  .wide h2 { font: 700 12px/1 ui-sans-serif, system-ui, sans-serif; letter-spacing: .1em; text-transform: uppercase; margin: 0 0 8px; color: var(--teal-d); }
+  a { color: var(--teal-d); }
+  .queue { counter-reset: q; }
+  .queue li { margin: 8px 0; }
+  .now { font-weight: 700; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { background: #d7ece9; color: var(--teal-d); font: 600 12px/1.2 ui-sans-serif, system-ui, sans-serif; padding: 6px 8px; border-radius: 999px; }
+  .flags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .flag { font: 600 12px/1.2 ui-sans-serif, system-ui, sans-serif; color: var(--hold); background: #f8e4de; padding: 6px 8px; border-radius: 4px; }
+  footer { margin-top: 18px; color: var(--muted); font-size: 13px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>LIZZIE POD — TRACKING</h1>
+      <div class="sub">13 Aug 2026, 2:17pm AST · Ops: inspectability + constraints. Strategy holds GTM. Not a product dashboard.</div>
+    </div>
+    <div class="pill">Not a launch</div>
+  </header>
+
+  <div class="row">
+    <article class="card">
+      <h2 class="teal">Now build</h2>
+      <div class="body">
+        <p class="now"><a href="https://github.com/Perk4/lizzie/issues/37">#37</a> still in flight. Unit not done.</p>
+        <ul>
+          <li>Main <code>61b9e47</code> via <a href="https://github.com/Perk4/lizzie/pull/39">PR 39</a> did not meet done-when.</li>
+          <li>Anthropic key is saved. Live send still 202 + “internal error”.</li>
+          <li>Cause: Lizzie is async; Flue requires a synchronous agent function. Next PR: sync Lizzie.</li>
+          <li>48h expires 1:56pm Sat 8/15. Ticket 2 held.</li>
+        </ul>
+      </div>
+    </article>
+    <article class="card">
+      <h2 class="terra">Now GTM</h2>
+      <div class="body">
+        <ul>
+          <li>Video essays for knowledge workers. Not app theater.</li>
+          <li>Brand card locked. Show format locked.</li>
+          <li>Next in session: episode 1 job (passion / personal / relationship).</li>
+          <li>Show is not a repo workstream. No show coding bot.</li>
+        </ul>
+      </div>
+    </article>
+    <article class="card">
+      <h2 class="sandh">Next / hold</h2>
+      <div class="body">
+        <ul>
+          <li>After #37: live demo research → poller id → R2 GET → planning fields.</li>
+          <li>Later: filmable inspectable path once beta exists.</li>
+          <li>Hold: island-as-default, check-in-first, conductor, character/Design, YouTube/show.</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+
+  <section class="wide">
+    <h2>Serial app queue (greenlit)</h2>
+    <ol class="queue">
+      <li><span class="now">NOW — #37 Chat Settings provider on first send.</span> Done when: no-key path points at Settings AND saved key → one send → one visible reply. Ceramics open/close stays green.</li>
+      <li>Demo research via start-workflow (not complete-mock-work).</li>
+      <li>Chat poller matches submissionId.</li>
+      <li>R2 GET when r2Key exists.</li>
+      <li>Planning artifact fields in the detail view.</li>
+    </ol>
+  </section>
+
+  <section class="wide">
+    <h2>Brand card (locked)</h2>
+    <p>2D visitor · slightly other · warm and odd · POV · same body on show and island.</p>
+    <p>Voice: warm and close. Otherness in writing and drawing, not a bit. Not a teacher, not a pet, not a human host.</p>
+    <p>Visual refusals: not ape, not bird, not Tolan flower-alien, not a little person.</p>
+  </section>
+
+  <section class="wide">
+    <h2>Show format (locked) — not app theater</h2>
+    <p>Spine: Casual Finance (researched rhyme, numbers on screen). Packaging: 2D creature-essayist. Steal from Monke: weekly + thumbnail + one CTA. Not a listicle. Not an app sell. Flagship 8–12 min. Shorts = one-rule cutdowns. No fake demo until beta.</p>
+  </section>
+
+  <section class="wide">
+    <h2>Landed</h2>
+    <div class="chips">
+      <span class="chip">#7–#11 slice</span>
+      <span class="chip">#31 PR 32</span>
+      <span class="chip">#33 PR 34</span>
+      <span class="chip">#35 FK persist</span>
+      <span class="chip">#36 close + chat errors</span>
+      <span class="chip">#37 PR 38 + PR 39 (not done)</span>
+      <span class="chip">brand feel</span>
+      <span class="chip">look</span>
+      <span class="chip">otherness</span>
+      <span class="chip">voice</span>
+      <span class="chip">show format</span>
+    </div>
+  </section>
+
+  <section class="wide">
+    <h2>Flag / don’t</h2>
+    <div class="flags">
+      <span class="flag">XP / streaks</span>
+      <span class="flag">chores loop</span>
+      <span class="flag">second world</span>
+      <span class="flag">habit tracker</span>
+      <span class="flag">paywall</span>
+      <span class="flag">YouTube in repo</span>
+      <span class="flag">app skins</span>
+      <span class="flag">teacher / pet / host</span>
+      <span class="flag">ape / bird / Tolan / little-person</span>
+      <span class="flag">app theater</span>
+      <span class="flag">fake demo</span>
+      <span class="flag">listicle</span>
+      <span class="flag">app-sell CTA</span>
+      <span class="flag">show coding bot</span>
+    </div>
+  </section>
+
+  <footer>
+    <div>Owed: episode 1 job · Design silhouettes · #37 one-send → one-reply</div>
+    <div>Stuck: none · 48h on #37: 1:56pm Sat 8/15</div>
+  </footer>
+</div>
+</body>
+</html>
