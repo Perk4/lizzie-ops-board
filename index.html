@@ -63,7 +63,7 @@
   <header>
     <div>
       <h1>LIZZIE POD — TRACKING</h1>
-      <div class="sub">13 Aug 2026, 2:30pm AST · Ops: inspectability + constraints. Strategy holds GTM. Not a product dashboard.</div>
+      <div class="sub">13 Aug 2026, 2:32pm AST · Ops: inspectability + constraints. Strategy holds GTM. Not a product dashboard.</div>
     </div>
     <div class="pill">Not a launch</div>
   </header>
@@ -72,11 +72,11 @@
     <article class="card">
       <h2 class="teal">Now build</h2>
       <div class="body">
-        <p class="now"><a href="https://github.com/Perk4/lizzie/issues/37">#37</a> still in flight. Chat still broken in the UI.</p>
+        <p class="now"><a href="https://github.com/Perk4/lizzie/issues/37">#37</a> still in flight. UI is one-behind: Q2 answers Q1.</p>
         <ul>
-          <li>GitHub close is not the gate. PRs 38–40 on main <code>69ecfdb</code> did not meet done-when.</li>
-          <li>Done when Perk sees one send → one reply in the UI.</li>
-          <li>Ticket 2 held. 48h restarted: expires 2:30pm Sat 8/15.</li>
+          <li>Cause: client POSTs <code>kind: signal, type: user-turn</code>, so Lizzie treats the send as a system note.</li>
+          <li>Follow-up: <code>kind: user</code> again, keep sync Lizzie, model from persisted/useAgentStart.</li>
+          <li>Ticket 2 held. 48h expires 2:30pm Sat 8/15.</li>
         </ul>
       </div>
     </article>
