@@ -55,6 +55,27 @@
   .chip { background: #d7ece9; color: var(--teal-d); font: 600 12px/1.2 ui-sans-serif, system-ui, sans-serif; padding: 6px 8px; border-radius: 999px; }
   .flags { display: flex; flex-wrap: wrap; gap: 6px; }
   .flag { font: 600 12px/1.2 ui-sans-serif, system-ui, sans-serif; color: var(--hold); background: #f8e4de; padding: 6px 8px; border-radius: 4px; }
+
+  .kanban { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 22px 0 8px; }
+  @media (max-width: 980px) { .kanban { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 620px) { .kanban { grid-template-columns: 1fr; } }
+  .kcol { background: var(--card); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; min-height: 140px; }
+  .kcol h2 { margin: 0; padding: 10px 12px; font: 700 12px/1 ui-sans-serif, system-ui, sans-serif; letter-spacing: .1em; text-transform: uppercase; color: #fff8ee; }
+  .k-now h2 { background: var(--terra); }
+  .k-next h2 { background: var(--teal); }
+  .k-hold h2 { background: var(--hold); }
+  .k-done h2 { background: #3d6b4f; }
+  .kcol .body { padding: 8px; }
+  .kcard { background: #fffdf8; border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; margin: 0 0 8px; }
+  .kcard:last-child { margin-bottom: 0; }
+  .kcard .title { font-weight: 700; font-size: 13.5px; }
+  .kcard .note { color: var(--muted); font-size: 12.5px; margin-top: 3px; }
+  .kmeta { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+  .tag { font: 600 10px/1 ui-sans-serif, system-ui, sans-serif; letter-spacing: .04em; text-transform: uppercase; padding: 3px 6px; border-radius: 999px; }
+  .tag.who { background: #d7ece9; color: var(--teal-d); }
+  .tag.stage { background: #f0e2c8; color: #6b5a48; }
+  .kempty { color: var(--muted); font-style: italic; padding: 10px 6px 6px; font-size: 13.5px; }
+  .krule { color: var(--muted); font-size: 13px; margin: 0 0 18px; }
   footer { margin-top: 18px; color: var(--muted); font-size: 13px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 </style>
 </head>
@@ -63,12 +84,80 @@
   <header>
     <div>
       <h1>LIZZIE POD — TRACKING</h1>
-      <div class="sub">16 Aug 2026, 3:52pm AST · Ops: inspectability + constraints. Strategy holds GTM. Not a product dashboard.</div>
+      <div class="sub">16 Aug 2026, 4:40pm AST · Ops: inspectability + constraints. Strategy holds GTM. Not a product dashboard.</div>
     </div>
     <div class="pill">Not a launch</div>
   </header>
 
-  <div class="row">
+
+  <section class="kanban" aria-label="Kanban">
+    <article class="kcol k-now">
+      <h2>Now</h2>
+      <div class="body">
+        <p class="kempty">Empty. No 12h ping.</p>
+      </div>
+    </article>
+    <article class="kcol k-next">
+      <h2>Next</h2>
+      <div class="body">
+        <div class="kcard">
+          <div class="title"><a href="https://github.com/Perk4/cairn-essays/issues/15">#15</a> Puppet acting grammar</div>
+          <div class="note">First build if Perk keeps the cut. Poses partly in PR 28.</div>
+          <div class="kmeta"><span class="tag who">Koder · when greenlit</span><span class="tag stage">queued</span></div>
+        </div>
+        <div class="kcard">
+          <div class="title"><a href="https://github.com/Perk4/cairn-essays/issues/11">#11</a> Generated vs drawn cards</div>
+          <div class="kmeta"><span class="tag who">HITL · Perk</span><span class="tag stage">grilling</span></div>
+        </div>
+        <div class="kcard">
+          <div class="title"><a href="https://github.com/Perk4/cairn-essays/issues/8">#8</a> Font and motion lock</div>
+          <div class="kmeta"><span class="tag who">HITL · Perk</span><span class="tag stage">grilling</span></div>
+        </div>
+        <div class="kcard">
+          <div class="title"><a href="https://github.com/Perk4/cairn-essays/issues/16">#16</a> Episode JSON authorship</div>
+          <div class="kmeta"><span class="tag who">HITL · Perk</span><span class="tag stage">grilling</span></div>
+        </div>
+        <div class="kcard">
+          <div class="title"><a href="https://github.com/Perk4/cairn-essays/issues/10">#10</a> Render pipeline shape</div>
+          <div class="kmeta"><span class="tag who">HITL · Perk</span><span class="tag stage">grilling</span></div>
+        </div>
+        <div class="kcard">
+          <div class="title"><a href="https://github.com/Perk4/cairn-essays/issues/14">#14</a> Manual vs auto</div>
+          <div class="kmeta"><span class="tag who">HITL · Perk</span><span class="tag stage">grilling</span></div>
+        </div>
+      </div>
+    </article>
+    <article class="kcol k-hold">
+      <h2>Hold</h2>
+      <div class="body">
+        <div class="kcard">
+          <div class="title">Perk watch <a href="https://github.com/Perk4/cairn-essays/commit/c9a5547">c9a5547</a></div>
+          <div class="note">Ship bar. Not NOW. No clock. No 12h ping.</div>
+          <div class="kmeta"><span class="tag who">Perk</span><span class="tag stage">watching</span></div>
+        </div>
+      </div>
+    </article>
+    <article class="kcol k-done">
+      <h2>Done</h2>
+      <div class="body">
+        <div class="kcard">
+          <div class="title"><a href="https://github.com/Perk4/cairn-essays/issues/27">#27</a> Story cut</div>
+          <div class="kmeta"><span class="tag who">Koder · cloud agent</span><span class="tag stage">called</span></div>
+        </div>
+        <div class="kcard">
+          <div class="title"><a href="https://github.com/Perk4/cairn-essays/issues/25">#25</a> Caption-time week-1</div>
+          <div class="kmeta"><span class="tag who">Koder</span><span class="tag stage">called</span></div>
+        </div>
+        <div class="kcard">
+          <div class="title"><a href="https://github.com/Perk4/cairn-essays/issues/13">#13</a> Music bed · <a href="https://github.com/Perk4/cairn-essays/issues/12">#12</a> Shorts · <a href="https://github.com/Perk4/cairn-essays/issues/9">#9</a> captions · <a href="https://github.com/Perk4/cairn-essays/issues/7">#7</a> week-1 done</div>
+          <div class="kmeta"><span class="tag who">pod</span><span class="tag stage">closed this week</span></div>
+        </div>
+      </div>
+    </article>
+  </section>
+  <p class="krule">12h ping: only NOW, and only if the assignee is an agent (Koder, Design, Research, or a named cloud agent). One group message, tag them. Skip if NOW is empty. No ping on Perk, HITL, Hold, or Done.</p>
+
+    <div class="row">
     <article class="card">
       <h2 class="teal">Now build</h2>
       <div class="body">
