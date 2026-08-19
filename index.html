@@ -24,7 +24,7 @@
     color: var(--ink);
     font: 16px/1.45 "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
   }
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 32px 20px 64px; }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 32px 20px 64px; }
   header { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
   h1 { font-size: 28px; letter-spacing: .04em; margin: 0 0 4px; }
   .sub { color: var(--muted); font-size: 14px; }
@@ -56,13 +56,14 @@
   .flags { display: flex; flex-wrap: wrap; gap: 6px; }
   .flag { font: 600 12px/1.2 ui-sans-serif, system-ui, sans-serif; color: var(--hold); background: #f8e4de; padding: 6px 8px; border-radius: 4px; }
 
-  .kanban { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 22px 0 8px; }
-  @media (max-width: 980px) { .kanban { grid-template-columns: 1fr 1fr; } }
+  .kanban { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin: 22px 0 8px; }
+  @media (max-width: 1100px) { .kanban { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 620px) { .kanban { grid-template-columns: 1fr; } }
   .kcol { background: var(--card); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; min-height: 140px; }
   .kcol h2 { margin: 0; padding: 10px 12px; font: 700 12px/1 ui-sans-serif, system-ui, sans-serif; letter-spacing: .1em; text-transform: uppercase; color: #fff8ee; }
   .k-now h2 { background: var(--terra); }
   .k-next h2 { background: var(--teal); }
+  .k-pr h2 { background: #b0894f; }
   .k-hold h2 { background: var(--hold); }
   .k-done h2 { background: #3d6b4f; }
   .kcol .body { padding: 8px; }
@@ -84,7 +85,7 @@
   <header>
     <div>
       <h1>LIZZIE POD — TRACKING</h1>
-      <div class="sub">18 Aug 2026, 9:05pm AST · Ops: inspectability + constraints. Strategy holds GTM. Not a product dashboard.</div>
+      <div class="sub">19 Aug 2026, 8:59am AST · Ops: inspectability + constraints. Strategy holds GTM. Not a product dashboard.</div>
     </div>
     <div class="pill">Not a launch</div>
   </header>
@@ -96,9 +97,9 @@
       <div class="body">
         <div class="kcard">
           <div class="title"><a href="https://github.com/Perk4/cairn-essays/issues/85">#85</a> ep01 acting cut on current main</div>
-          <div class="note">Mouth, verbs, plain VO. Skip #79–#83. Cut on current main. Koder spawns Cursor agents. Do not implement. Do not merge until Perk watches. Not PR 30. Design talking kit is the master.</div>
-          <div class="kmeta"><span class="tag who">Koder</span><span class="tag stage">named unit</span></div>
-          <div class="note">48h WAITING — starts when a cloud agent is named (bc-…). No agent named yet. Clock is waiting, not on, not off-as-closed. Do not invent a start time or expiry. 12h MAY tag Koder if #85 stalls. No 12h on Perk.</div>
+          <div class="note">Mouth, verbs, plain VO on current main. Skip #79–#83 until this cut exists. Koder launches /poteto-mode Cursor cloud sessions. Does not implement. Do not merge until Perk watches. Not PR 30. Talking kit is the master.</div>
+          <div class="kmeta"><span class="tag who">Koder</span><span class="tag stage">48h ON</span></div>
+          <div class="note">48h ON. Named 2026-08-19 9:01am AST: <code>bc-298b2b75-d50b-4eaf-a783-611d84fcbb16</code>. Expires 2026-08-21 9:01am AST. 12h MAY tag Koder if NOW stalls. No 12h on Perk.</div>
         </div>
       </div>
     </article>
@@ -107,59 +108,46 @@
       <div class="body">
         <div class="kcard">
           <div class="title"><a href="https://github.com/Perk4/cairn-essays/issues/79">#79</a> Board / compile / Animatic spec</div>
-          <div class="kmeta"><span class="tag who">ready-for-agent</span><span class="tag stage">queued</span></div>
+          <div class="note">Do not start. Perk skipped factory tickets until the current-main cut exists.</div>
+          <div class="kmeta"><span class="tag who">Koder</span><span class="tag stage">queued</span></div>
         </div>
         <div class="kcard">
           <div class="title"><a href="https://github.com/Perk4/cairn-essays/issues/80">#80</a> Craft check is red</div>
-          <div class="kmeta"><span class="tag who">ready-for-agent</span><span class="tag stage">queued</span></div>
+          <div class="note">Do not start. Perk skipped factory tickets until the current-main cut exists.</div>
+          <div class="kmeta"><span class="tag who">Koder</span><span class="tag stage">queued</span></div>
         </div>
         <div class="kcard">
           <div class="title"><a href="https://github.com/Perk4/cairn-essays/issues/81">#81</a> One Part playable Sequence</div>
-          <div class="kmeta"><span class="tag who">ready-for-agent</span><span class="tag stage">queued</span></div>
+          <div class="note">Do not start. Perk skipped factory tickets until the current-main cut exists.</div>
+          <div class="kmeta"><span class="tag who">Koder</span><span class="tag stage">queued</span></div>
         </div>
         <div class="kcard">
           <div class="title"><a href="https://github.com/Perk4/cairn-essays/issues/82">#82</a> Animatic record</div>
-          <div class="kmeta"><span class="tag who">ready-for-agent</span><span class="tag stage">queued</span></div>
+          <div class="note">Do not start. Perk skipped factory tickets until the current-main cut exists.</div>
+          <div class="kmeta"><span class="tag who">Koder</span><span class="tag stage">queued</span></div>
         </div>
         <div class="kcard">
           <div class="title"><a href="https://github.com/Perk4/cairn-essays/issues/83">#83</a> Remaining Parts</div>
-          <div class="kmeta"><span class="tag who">ready-for-agent</span><span class="tag stage">queued</span></div>
+          <div class="note">Do not start. Perk skipped factory tickets until the current-main cut exists.</div>
+          <div class="kmeta"><span class="tag who">Koder</span><span class="tag stage">queued</span></div>
         </div>
         <div class="kcard">
           <div class="title">Design systems examples</div>
-          <div class="note">Drive: Lizzie / design-systems / examples. One photo + one {slug}.design-system.md per Perk example. Off NOW.</div>
+          <div class="note">Drive: Lizzie / design-systems / examples. They can work this without waiting. Off NOW.</div>
           <div class="kmeta"><span class="tag who">Design</span><span class="tag stage">queued</span></div>
-        </div>
-        <div class="kcard">
-          <div class="title"><a href="https://github.com/Perk4/cairn-essays/issues/15">#15</a> Puppet acting grammar</div>
-          <div class="note">First build if Perk keeps the cut. Poses partly in PR 28.</div>
-          <div class="kmeta"><span class="tag who">Koder · when greenlit</span><span class="tag stage">queued</span></div>
-        </div>
-        <div class="kcard">
-          <div class="title"><a href="https://github.com/Perk4/cairn-essays/issues/11">#11</a> Generated vs drawn cards</div>
-          <div class="kmeta"><span class="tag who">HITL · Perk</span><span class="tag stage">grilling</span></div>
-        </div>
-        <div class="kcard">
-          <div class="title"><a href="https://github.com/Perk4/cairn-essays/issues/8">#8</a> Font and motion lock</div>
-          <div class="kmeta"><span class="tag who">HITL · Perk</span><span class="tag stage">grilling</span></div>
-        </div>
-        <div class="kcard">
-          <div class="title"><a href="https://github.com/Perk4/cairn-essays/issues/16">#16</a> Episode JSON authorship</div>
-          <div class="kmeta"><span class="tag who">HITL · Perk</span><span class="tag stage">grilling</span></div>
-        </div>
-        <div class="kcard">
-          <div class="title"><a href="https://github.com/Perk4/cairn-essays/issues/10">#10</a> Render pipeline shape</div>
-          <div class="kmeta"><span class="tag who">HITL · Perk</span><span class="tag stage">grilling</span></div>
-        </div>
-        <div class="kcard">
-          <div class="title"><a href="https://github.com/Perk4/cairn-essays/issues/14">#14</a> Manual vs auto</div>
-          <div class="kmeta"><span class="tag who">HITL · Perk</span><span class="tag stage">grilling</span></div>
         </div>
         <div class="kcard">
           <div class="title">CUA vs Flue / pi / Cloudflare</div>
           <div class="note">Side ask for Lizzie. Not NOW. No 12h.</div>
           <div class="kmeta"><span class="tag who">Research</span><span class="tag stage">side ask</span></div>
         </div>
+      </div>
+    </article>
+    <article class="kcol k-pr">
+      <h2>PR review</h2>
+      <div class="body">
+        <div class="kempty">Empty until a draft PR exists.</div>
+        <div class="kmeta"><span class="tag who">Perk</span><span class="tag stage">empty</span></div>
       </div>
     </article>
     <article class="kcol k-hold">
@@ -200,19 +188,19 @@
       </div>
     </article>
   </section>
-  <p class="krule">12h ping: only NOW, and only if the assignee is an agent (Koder, Design, Research, or a named cloud agent). One group message, tag them. Skip if NOW is empty. No ping on Perk, HITL, Hold, or Done.</p>
+  <p class="krule">Strategy + Ops own the board. Strategy names what/whether. Ops moves cards. Koder never codes — he launches /poteto-mode Cursor cloud sessions against the NOW ticket only. One NOW. One cloud agent at a time. Agent opens a draft PR → card moves to PR review. Ops pings Strategy, not Perk. 12h: only NOW + agent assignee. Never ping Perk, HITL, PR review, Hold, or Done. Stay off Perk4/lizzie.</p>
 
     <div class="row">
     <article class="card">
       <h2 class="teal">Now build</h2>
       <div class="body">
-        <p class="now">NOW is <a href="https://github.com/Perk4/cairn-essays/issues/85">#85</a> acting cut. Assignee Koder · named unit. 48h WAITING (starts when a cloud agent is named). #79–#83 stay Next. #29 abandoned (PR 30 closed, not merged). Hold is Perk watch of main 37243dc + the #85 cut when it exists.</p>
+        <p class="now">NOW is <a href="https://github.com/Perk4/cairn-essays/issues/85">#85</a> acting cut. Assignee Koder · named unit. 48h ON (named 9:01am AST, expires 2026-08-21 9:01am AST). #79–#83 stay Next. #29 abandoned (PR 30 closed, not merged). Hold is Perk watch of main 37243dc + the #85 cut when it exists.</p>
         <ul>
           <li><a href="https://github.com/Perk4/cairn-essays/issues/27">#27</a> BUILD done. <a href="https://github.com/Perk4/cairn-essays/pull/28">PR 28</a> merged 3:51pm AST, main <a href="https://github.com/Perk4/cairn-essays/commit/c9a5547">c9a5547</a>. GitHub closed #27. Strategy called it. Story cut: VO, acting Cairn, two-beat Shorts. Claimed cut: 9:32 flagship + two 18s Shorts + espeak placeholder.</li>
           <li>SHIP bar (not NOW, no clock): waits on Perk watching c9a5547. Perk has not watched this cut yet. Do not start a clock. Do not put watch on NOW.</li>
           <li><a href="https://github.com/Perk4/cairn-essays/issues/25">#25</a> landed (history). <a href="https://github.com/Perk4/cairn-essays/pull/26">PR 26</a> merged 4:16pm AST, then-main <a href="https://github.com/Perk4/cairn-essays/commit/c4d06ea">c4d06ea</a>. 9:50 essay + two 25s Shorts + CC0 bed. Strategy called it. Perk watched that ep01: ugly, not wrong, would not ship.</li>
           <li>Week-1 done lock (landed bar): watchable 8–12 min essay, real timing AND music, no VO, files only, YouTube later.</li>
-          <li>Backlog index <a href="https://github.com/Perk4/cairn-essays/issues/24">#24</a> “Factory queue”: already rewritten for this lock (NOW #85). Do not revert it. Not pointing at #27 as NOW. Remaining #8–16 are backlog, not NOW. <a href="https://github.com/Perk4/cairn-essays/issues/7">#7</a>, <a href="https://github.com/Perk4/cairn-essays/issues/9">#9</a>, <a href="https://github.com/Perk4/cairn-essays/issues/12">#12</a>, <a href="https://github.com/Perk4/cairn-essays/issues/13">#13</a> CLOSED.</li>
+          <li>Backlog index <a href="https://github.com/Perk4/cairn-essays/issues/24">#24</a> “Factory queue”: already rewritten for this lock (NOW #85). Do not revert it. Not pointing at #27 as NOW. Closed #8, #10, #11, #14, #15, #16 dropped from the board (not Next). <a href="https://github.com/Perk4/cairn-essays/issues/7">#7</a>, <a href="https://github.com/Perk4/cairn-essays/issues/9">#9</a>, <a href="https://github.com/Perk4/cairn-essays/issues/12">#12</a>, <a href="https://github.com/Perk4/cairn-essays/issues/13">#13</a> CLOSED.</li>
           <li>Factory earlier on main via <a href="https://github.com/Perk4/cairn-essays/pull/17">PR 17</a>. Stayed off Perk4/lizzie and PR 54.</li>
         </ul>
       </div>
@@ -232,6 +220,7 @@
       <h2 class="sandh">Next / hold</h2>
       <div class="body">
         <ul>
+          <li>Five columns: Now · Next · PR review · Hold · Done. PR review is Perk’s column — empty until a cloud agent opens a draft PR. Then Ops moves the card here. No merge. No 12h on Perk or on PR review.</li>
           <li>Hold (not NOW, no clock): Perk watch of main 37243dc + the #85 cut when it exists. No 12h on Perk.</li>
           <li>App: inspectability queue done. #43 called, #49/#50/#52 landed. No ticket 3, no ticket 6. Not NOW.</li>
           <li><a href="https://github.com/Perk4/lizzie/pull/54">PR 54</a> (habit/todo/streak) stays open, not NOW, do not merge. Habits not kill list.</li>
@@ -243,7 +232,7 @@
 
   <section class="wide">
     <h2>Show workstream (not the app queue)</h2>
-    <p>Live og:image is cairn-whatsgood-og-v3 — <a href="https://lizzie-show.pages.dev/assets/cairn-whatsgood-og-v3-1200x630.gif">v3 GIF</a>. Do not revert. <a href="https://github.com/Perk4/cairn-essays">Perk4/cairn-essays</a> main is <a href="https://github.com/Perk4/cairn-essays/commit/c9a5547">c9a5547</a>. <a href="https://github.com/Perk4/cairn-essays/issues/27">#27</a> BUILD called. <a href="https://github.com/Perk4/cairn-essays/pull/28">PR 28</a> merged 3:51pm AST: story cut on main (VO, acting Cairn, two-beat Shorts). GitHub closed #27. Strategy called it. NOW is #85. 48h WAITING (starts when a cloud agent is named). Koder on #85. Does not implement. Hold: Perk watch of main 37243dc + the #85 cut when it exists (not PR 30, no clock). <a href="https://github.com/Perk4/cairn-essays/issues/25">#25</a> landed (history). <a href="https://github.com/Perk4/cairn-essays/pull/26">PR 26</a> merged 4:16pm AST on then-main <a href="https://github.com/Perk4/cairn-essays/commit/c4d06ea">c4d06ea</a>: 9:50 essay + two 25s Shorts + CC0 bed. Strategy called it. Perk watched that ep01: ugly, not wrong, would not ship. Factory earlier via <a href="https://github.com/Perk4/cairn-essays/pull/17">PR 17</a>. Week-1 done lock (landed bar): watchable 8–12 min essay, real timing AND music, no VO, files only, YouTube later. <a href="https://github.com/Perk4/cairn-essays/issues/13">#13</a> absorbed into #25, then closed. <a href="https://github.com/Perk4/cairn-essays/issues/7">#7</a>, <a href="https://github.com/Perk4/cairn-essays/issues/9">#9</a>, <a href="https://github.com/Perk4/cairn-essays/issues/12">#12</a>, <a href="https://github.com/Perk4/cairn-essays/issues/13">#13</a> CLOSED. Issue log cleaned to match then-main c4d06ea. Backlog index <a href="https://github.com/Perk4/cairn-essays/issues/24">#24</a> “Factory queue”: already rewritten for this lock (NOW #85). Do not revert it. Not pointing at #27 as NOW. Remaining #8–16 backlog, not NOW. Stayed off Perk4/lizzie and PR 54. Research is on a show-tools brief from Strategy — leave Research to Strategy; do not unpark onto stills. Design: Cairn kit only. Stills 2–4 on Drive can wait (show-only). Do not start a producer. Ops does not implement. <strong>Episode 1 package locked</strong>: VO + four stills + shot list. Spec is the locked O'Keefe/Dweck/Walton 2018 essay. Show process locked 9:24am AST (off the NOW line, not a clock). App track: queue done, not NOW. Not merging PR 54.</p>
+    <p>Live og:image is cairn-whatsgood-og-v3 — <a href="https://lizzie-show.pages.dev/assets/cairn-whatsgood-og-v3-1200x630.gif">v3 GIF</a>. Do not revert. <a href="https://github.com/Perk4/cairn-essays">Perk4/cairn-essays</a> main is <a href="https://github.com/Perk4/cairn-essays/commit/c9a5547">c9a5547</a>. <a href="https://github.com/Perk4/cairn-essays/issues/27">#27</a> BUILD called. <a href="https://github.com/Perk4/cairn-essays/pull/28">PR 28</a> merged 3:51pm AST: story cut on main (VO, acting Cairn, two-beat Shorts). GitHub closed #27. Strategy called it. NOW is #85. 48h ON (named 9:01am AST: bc-298b2b75-d50b-4eaf-a783-611d84fcbb16, expires 2026-08-21 9:01am AST). Koder on #85. Does not implement. Hold: Perk watch of main 37243dc + the #85 cut when it exists (not PR 30, no clock). <a href="https://github.com/Perk4/cairn-essays/issues/25">#25</a> landed (history). <a href="https://github.com/Perk4/cairn-essays/pull/26">PR 26</a> merged 4:16pm AST on then-main <a href="https://github.com/Perk4/cairn-essays/commit/c4d06ea">c4d06ea</a>: 9:50 essay + two 25s Shorts + CC0 bed. Strategy called it. Perk watched that ep01: ugly, not wrong, would not ship. Factory earlier via <a href="https://github.com/Perk4/cairn-essays/pull/17">PR 17</a>. Week-1 done lock (landed bar): watchable 8–12 min essay, real timing AND music, no VO, files only, YouTube later. <a href="https://github.com/Perk4/cairn-essays/issues/13">#13</a> absorbed into #25, then closed. <a href="https://github.com/Perk4/cairn-essays/issues/7">#7</a>, <a href="https://github.com/Perk4/cairn-essays/issues/9">#9</a>, <a href="https://github.com/Perk4/cairn-essays/issues/12">#12</a>, <a href="https://github.com/Perk4/cairn-essays/issues/13">#13</a> CLOSED. Issue log cleaned to match then-main c4d06ea. Backlog index <a href="https://github.com/Perk4/cairn-essays/issues/24">#24</a> “Factory queue”: already rewritten for this lock (NOW #85). Do not revert it. Not pointing at #27 as NOW. Closed #8, #10, #11, #14, #15, #16 dropped from the board. Stayed off Perk4/lizzie and PR 54. Research is on a show-tools brief from Strategy — leave Research to Strategy; do not unpark onto stills. Design: Cairn kit only. Stills 2–4 on Drive can wait (show-only). Do not start a producer. Ops does not implement. <strong>Episode 1 package locked</strong>: VO + four stills + shot list. Spec is the locked O'Keefe/Dweck/Walton 2018 essay. Show process locked 9:24am AST (off the NOW line, not a clock). App track: queue done, not NOW. Not merging PR 54.</p>
   </section>
 
   <section class="wide">
@@ -272,7 +261,7 @@
       <li>#50 R2 GET landed yesterday (PR 51 merged).</li>
       <li>#52 planning cards landed yesterday (PR 53 merged). GitHub may still show open; Strategy called landed, not NOW.</li>
     </ol>
-    <p>No ticket 6. App work is not NOW. App 48h clock OFF. Show 48h WAITING on named agent for #85. #27 BUILD called (history). Koder on #85. Does not implement. Remaining #8–16 are backlog, not NOW. Do not start ticket 3. <a href="https://github.com/Perk4/lizzie/pull/54">PR 54</a> stays open, not NOW, do not merge. SHIP bar (not NOW, no clock): waits on Perk watching c9a5547.</p>
+    <p>No ticket 6. App work is not NOW. App 48h clock OFF. Show 48h ON for #85 (named 9:01am AST, expires 2026-08-21 9:01am AST). #27 BUILD called (history). Koder on #85. Does not implement. Closed #8, #10, #11, #14, #15, #16 dropped from the board. Do not start ticket 3. <a href="https://github.com/Perk4/lizzie/pull/54">PR 54</a> stays open, not NOW, do not merge. SHIP bar (not NOW, no clock): waits on Perk watching c9a5547.</p>
   </section>
 
   <section class="wide">
@@ -345,8 +334,8 @@
   </section>
 
   <footer>
-    <div>Owed: NOW #85 acting cut · 48h WAITING (starts when agent named) · no start/expiry invented · Koder · named unit · talking kit is master · no merge until Perk watches · not PR 30 · Hold is Perk watch of 37243dc + #85 cut · no 12h on Perk · #79–#83 Next · #29 abandoned · #24 Factory queue rewritten · stayed off Perk4/lizzie and PR 54</div>
-    <div>Stuck: none · 48h WAITING on named agent · Koder on #85 · PR 54 open, not NOW</div>
+    <div>Owed: NOW #85 acting cut · 48h ON · named bc-298b2b75-d50b-4eaf-a783-611d84fcbb16 2026-08-19 9:01am AST · expires 2026-08-21 9:01am AST · Koder · named unit · talking kit is master · no merge until Perk watches · not PR 30 · PR review empty until a draft PR · Hold is Perk watch of 37243dc + #85 cut · no 12h on Perk or PR review · #79–#83 Next queued do-not-start · #29 abandoned · stayed off Perk4/lizzie and PR 54</div>
+    <div>Stuck: none · 48h ON · agent bc-298b2b75-d50b-4eaf-a783-611d84fcbb16 · Koder on #85 · PR 54 open, not NOW</div>
   </footer>
 </div>
 </body>
